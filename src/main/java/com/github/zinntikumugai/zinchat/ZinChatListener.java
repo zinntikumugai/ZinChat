@@ -55,6 +55,6 @@ public class ZinChatListener implements Listener {
 
 
 		//出力
-		event.setMessage(japan + " (" + me + ")");
+		event.setMessage(japan + " §7(" + me + ")");
 	}
 }
