@@ -49,7 +49,7 @@ public class ZinChatListener implements Listener {
 
 		if(japan.equals("")) {
 			japan = kana;
-			player.sendMessage("[§4ZInChat§f]§2変換に問題が起きました。ひらがなの文字数が多い可能性があります。"
+			player.sendMessage("§2[ZInChat]§4変換に問題が起きました。ひらがなの文字数が多い可能性があります。"
 					+ "\n文字数を減らしてみてください。それでも起きる場合は管理者に問い合わせください。");
 		}
 
