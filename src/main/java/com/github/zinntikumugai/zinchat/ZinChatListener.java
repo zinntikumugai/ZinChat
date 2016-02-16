@@ -5,6 +5,7 @@ package com.github.zinntikumugai.zinchat;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 
@@ -14,7 +15,7 @@ import org.bukkit.event.player.AsyncPlayerChatEvent;
  */
 public class ZinChatListener implements Listener {
 
-	@EventHandler
+	@EventHandler(priority = EventPriority.HIGH)
 	public void onAsyncPlayerChat(AsyncPlayerChatEvent event) {
 		//変数宣言
 		int str_len, byte_len;
@@ -45,14 +46,14 @@ public class ZinChatListener implements Listener {
 		kana = ZinChatKanaCon.converter(me);
 		//漢字変換を行ったものを代入
 		japan = ZinChatGoogleImeCon.GoogleCon(kana);
-		
+
 		if(japan.equals("")) {
 			japan = kana;
 			player.sendMessage("[§4ZInChat§f]§2変換に問題が起きました。ひらがなの文字数が多い可能性があります。"
 					+ "\n文字数を減らしてみてください。それでも起きる場合は管理者に問い合わせください。");
 		}
-			
-		
+
+
 		//出力
 		event.setMessage(japan + " (" + me + ")");
 	}
