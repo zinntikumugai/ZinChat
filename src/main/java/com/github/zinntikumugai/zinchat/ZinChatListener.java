@@ -17,10 +17,10 @@ public class ZinChatListener implements Listener {
 
 	//2016/2/16	変数でやったほうが管理しやすいと思い追加
 	//同日	さらに強化
-	private static final String chek = ".*[-_.!~*\\'()a-zA-Z0-9;\\/?:\\@&=+\\$,%#]"
+	private static final String chek = ""
+			+ ".*[-_.!~*\\'()a-zA-Z0-9;\\/?:\\@&=+\\$,%# \t\n\f\r]"
 			+ "(https?|ftp)"
-			+ "(:\\/\\/[-_.!~*\\'()a-zA-Z0-9;\\/?:\\@&=+\\$,%#]+)"
-			+ ".*[-_.!~*\\'()a-zA-Z0-9;\\/?:\\@&=+\\$,%#]";
+			+ "(:\\/\\/[-_.!~*\\'()a-zA-Z0-9;\\/?:\\@&=+\\$,%# \t\n\f\r]+)";
 
 	//2016/2/16	MessageManagerとの競合(カラーコード)のため変更
 	@EventHandler(priority = EventPriority.HIGH)
