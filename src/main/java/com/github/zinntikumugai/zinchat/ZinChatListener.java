@@ -15,6 +15,8 @@ import org.bukkit.event.player.AsyncPlayerChatEvent;
  */
 public class ZinChatListener implements Listener {
 
+	private static final String chek = "(https?|ftp)(:\\/\\/[-_.!~*\\'()a-zA-Z0-9;\\/?:\\@&=+\\$,%#]+)$";
+
 	@EventHandler(priority = EventPriority.HIGH)
 	public void onAsyncPlayerChat(AsyncPlayerChatEvent event) {
 		//変数宣言
@@ -27,7 +29,7 @@ public class ZinChatListener implements Listener {
 		me = event.getMessage();
 
 		//URLがあったら終了
-		if( me.matches("(https?|ftp)"))
+		if( me.matches(chek))
 			return;
 
 		//文字数とバイト数を変数に入れる
