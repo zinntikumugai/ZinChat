@@ -17,7 +17,7 @@ public class ZinChatListener implements Listener {
 
 	private static final String chek = "(https?|ftp)(:\\/\\/[-_.!~*\\'()a-zA-Z0-9;\\/?:\\@&=+\\$,%#]+)$";
 
-	@EventHandler(priority = EventPriority.HIGH)
+	@EventHandler(priority = EventPriority.LOW)
 	public void onAsyncPlayerChat(AsyncPlayerChatEvent event) {
 		//変数宣言
 		int str_len, byte_len;
