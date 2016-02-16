@@ -15,9 +15,15 @@ import org.bukkit.event.player.AsyncPlayerChatEvent;
  */
 public class ZinChatListener implements Listener {
 
-	private static final String chek = "(https?|ftp)(:\\/\\/[-_.!~*\\'()a-zA-Z0-9;\\/?:\\@&=+\\$,%#]+)$";
+	//2016/2/16	変数でやったほうが管理しやすいと思い追加
+	//同日	さらに強化
+	private static final String chek = ".*[-_.!~*\\'()a-zA-Z0-9;\\/?:\\@&=+\\$,%#]"
+			+ "(https?|ftp)"
+			+ "(:\\/\\/[-_.!~*\\'()a-zA-Z0-9;\\/?:\\@&=+\\$,%#]+)"
+			+ ".*[-_.!~*\\'()a-zA-Z0-9;\\/?:\\@&=+\\$,%#]";
 
-	@EventHandler(priority = EventPriority.LOW)
+	//2016/2/16	MessageManagerとの競合(カラーコード)のため変更
+	@EventHandler(priority = EventPriority.HIGH)
 	public void onAsyncPlayerChat(AsyncPlayerChatEvent event) {
 		//変数宣言
 		int str_len, byte_len;
