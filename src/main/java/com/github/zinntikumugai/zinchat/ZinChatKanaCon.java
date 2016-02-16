@@ -92,7 +92,9 @@ public class ZinChatKanaCon {
 	}
 
 	static String converter(String org) {
-
+		//変数の初期化
+		//2016/2/16	初期化忘れのため追加
+		last = data = tmp = "";
 		//文字変換
 		for(int con = 0; con < org.length(); con++) {
 			tmp = org.substring(con, con+1);
