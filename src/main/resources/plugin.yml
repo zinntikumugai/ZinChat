@@ -1,0 +1,4 @@
+name: ZinChat
+version: 0.0.1
+main: com.github.zinntikumugai.zinchat.ZinChat
+author: zinntikumugai
