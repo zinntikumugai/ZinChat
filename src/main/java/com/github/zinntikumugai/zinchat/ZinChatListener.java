@@ -16,9 +16,9 @@ import org.bukkit.event.player.AsyncPlayerChatEvent;
 public class ZinChatListener implements Listener {
 
 	//2016/2/16	変数でやったほうが管理しやすいと思い追加
-	//同日	さらに強化
+	//2016/2/17 変更
 	private static final String chek = ""
-			+ ".*[-_.!~*\\'()a-zA-Z0-9;\\/?:\\@&=+\\$,%# \t\n\f\r]"
+			+ "[-_.!~*\\'()a-zA-Z0-9;\\/?:\\@&=+\\$,%# \t\n\f\r]*"
 			+ "(https?|ftp)"
 			+ "(:\\/\\/[-_.!~*\\'()a-zA-Z0-9;\\/?:\\@&=+\\$,%# \t\n\f\r]+)";
 
