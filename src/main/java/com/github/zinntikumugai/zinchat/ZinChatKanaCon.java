@@ -125,7 +125,7 @@ public class ZinChatKanaCon {
 				}
 				if(Character.isLetter(tmp.charAt(0))) {
 					if(Character.isUpperCase(tmp.charAt(0))) {
-						data = last + tmp;
+						data += last + tmp;
 						last = "";
 					} else if(last.equals(tmp)) {
 						dataadd("っ");
@@ -161,6 +161,20 @@ public class ZinChatKanaCon {
 					case")":
 						dataadd(")");
 						break;
+						//1016/2/19/追加
+					case"=":
+						dataadd("=");
+						break;
+					case"{":
+						dataadd("{");
+						break;
+					case"}":
+						dataadd("}");
+						break;
+					case"|":
+						dataadd("|");
+						break;
+
 					default:
 						dataadd(last + tmp);
 					}

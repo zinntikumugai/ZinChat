@@ -5,6 +5,7 @@ package com.github.zinntikumugai.zinchat;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 
@@ -21,7 +22,8 @@ public class ZinChatListener implements Listener {
 			+ "(https?|ftp)"
 			+ "(:\\/\\/[-_.!~*\\'()a-zA-Z0-9;\\/?:\\@&=+\\$,%# \t\n\f\r]+)";
 
-	@EventHandler
+	//ChatManagerとの競合対策
+	@EventHandler(priority = EventPriority.LOW)
 	public void onAsyncPlayerChat(AsyncPlayerChatEvent event) {
 		//変数宣言
 		int str_len, byte_len;
