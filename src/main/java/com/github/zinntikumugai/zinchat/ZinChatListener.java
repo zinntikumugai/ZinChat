@@ -5,7 +5,6 @@ package com.github.zinntikumugai.zinchat;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
-import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 
@@ -22,8 +21,7 @@ public class ZinChatListener implements Listener {
 			+ "(https?|ftp)"
 			+ "(:\\/\\/[-_.!~*\\'()a-zA-Z0-9;\\/?:\\@&=+\\$,%# \t\n\f\r]+)";
 
-	//2016/2/16	MessageManagerとの競合(カラーコード)のため変更
-	@EventHandler(priority = EventPriority.HIGH)
+	@EventHandler
 	public void onAsyncPlayerChat(AsyncPlayerChatEvent event) {
 		//変数宣言
 		int str_len, byte_len;
