@@ -95,6 +95,7 @@ public class ZinChatKanaCon {
 		//変数の初期化
 		//2016/2/16	初期化忘れのため追加
 		last = data = tmp = "";
+
 		//文字変換
 		for(int con = 0; con < org.length(); con++) {
 			tmp = org.substring(con, con+1);
@@ -118,8 +119,7 @@ public class ZinChatKanaCon {
 			default:
 
 				if(last.equals("n") && !tmp.equals("y")) {
-					data += "ん";
-					last = "";
+					dataadd("ん");
 					if(tmp.equals("n"))
 						continue;
 				}
@@ -128,8 +128,7 @@ public class ZinChatKanaCon {
 						data = last + tmp;
 						last = "";
 					} else if(last.equals(tmp)) {
-							data += "っ";
-							last = tmp;
+						dataadd("っ");
 						}else {
 							last = last + tmp;
 						}
@@ -163,8 +162,7 @@ public class ZinChatKanaCon {
 						dataadd(")");
 						break;
 					default:
-						data += last + tmp;
-						last = "";
+						dataadd(last + tmp);
 					}
 				}
 			}

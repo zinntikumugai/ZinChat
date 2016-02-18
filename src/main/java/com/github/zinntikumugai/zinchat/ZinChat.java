@@ -17,4 +17,9 @@ public class ZinChat extends JavaPlugin {
 		getServer().getPluginManager().registerEvents(new ZinChatListener(),(this));
 
 	}
+
+	@Override
+	public void onDisable() {
+
+	}
 }

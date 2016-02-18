@@ -52,6 +52,7 @@ public class ZinChatListener implements Listener {
 
 		//ひらがな変換を行ったものを代入
 		kana = ZinChatKanaCon.converter(me);
+
 		//漢字変換を行ったものを代入
 		japan = ZinChatGoogleImeCon.GoogleCon(kana);
 
